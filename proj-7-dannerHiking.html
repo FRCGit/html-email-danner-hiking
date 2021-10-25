@@ -1,0 +1,425 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>HTML Email Template Boilerplate</title>
+
+  <style type="text/css">
+    @import url(http://fast.fonts.net/t/1.css?apiType=css&projectid=c4c8621d-5cf1-45fc-b71c-cfe59738ea46);
+
+    @font-face {
+      font-family: "DIN Next LT W01 Light";
+      src: url(https://s3.amazonaws.com/content.danner.com/email/Fonts/fb0dd5e6-cf57-43be-8f3f-2880d5389694.eot?#iefix);
+      src: url(https://s3.amazonaws.com/content.danner.com/email/Fonts/fb0dd5e6-cf57-43be-8f3f-2880d5389694.eot?#iefix) format("eot"), url(https://s3.amazonaws.com/content.danner.com/email/Fonts/14aba99e-8c97-4daa-a8df-67920a051402.woff2) format("woff2"), url(https://s3.amazonaws.com/content.danner.com/email/Fonts/96fd6d6f-fad6-4dd9-ab70-29547a56cacd.woff) format("woff"), url(https://s3.amazonaws.com/content.danner.com/email/Fonts/cdc1c0e4-213b-4a01-a1dc-af6dddf2263a.ttf) format("truetype")
+    }
+
+    @font-face {
+      font-family: "DIN Next LT W01 Bold";
+      src: url(https://s3.amazonaws.com/content.danner.com/email/Fonts/fa5ed46b-792d-4f47-894e-fa587cf4e1cf.eot?#iefix);
+      src: url(https://s3.amazonaws.com/content.danner.com/email/Fonts/fa5ed46b-792d-4f47-894e-fa587cf4e1cf.eot?#iefix) format("eot"), url(https://s3.amazonaws.com/content.danner.com/email/Fonts/03008527-67bd-478e-98e3-3b56dd9a6520.woff2) format("woff2"), url(https://s3.amazonaws.com/content.danner.com/email/Fonts/557f817d-9c25-4a23-baaf-a3cf84a7cd7c.woff) format("woff"), url(https://s3.amazonaws.com/content.danner.com/email/Fonts/92ed1479-1d40-4a94-8baf-6abd88b17afa.ttf) format("truetype")
+    }
+
+    @font-face {
+      font-family: "DIN Next LT W01 Heavy";
+      src: url(https://s3.amazonaws.com/content.danner.com/email/Fonts/215d2e40-5e98-4976-b7d4-80d770fb5de9.eot?#iefix);
+      src: url(https://s3.amazonaws.com/content.danner.com/email/Fonts/215d2e40-5e98-4976-b7d4-80d770fb5de9.eot?#iefix) format("eot"), url(https://s3.amazonaws.com/content.danner.com/email/Fonts/a173e9a2-1b5d-4cd0-bd6e-ee2185940233.woff2) format("woff2"), url(https://s3.amazonaws.com/content.danner.com/email/Fonts/ac5c3376-2fd7-405c-82f6-75ddc1f8d386.woff) format("woff"), url(https://s3.amazonaws.com/content.danner.com/email/Fonts/2fe26fac-819f-4bb8-adb0-4d1a62fab72d.ttf) format("truetype")
+    }
+
+    @font-face {
+      font-family: "DINNextW01-CondensedHea";
+      src: url(https://s3.amazonaws.com/content.danner.com/email/Fonts/10ea3ea4-cd5d-4305-a069-553921bb4565.eot?#iefix);
+      src: url(https://s3.amazonaws.com/content.danner.com/email/Fonts/10ea3ea4-cd5d-4305-a069-553921bb4565.eot?#iefix) format("eot"), url(https://s3.amazonaws.com/content.danner.com/email/Fonts/acbfa600-0449-44a4-b773-d281b71044d8.woff2) format("woff2"), url(https://s3.amazonaws.com/content.danner.com/email/Fonts/d245e531-16e5-4428-904d-d6cb987d44f9.woff) format("woff"), url(https://s3.amazonaws.com/content.danner.com/email/Fonts/b85fd97e-f10c-4dde-87fb-51dd1bdbf114.ttf) format("truetype")
+    }
+
+    /* global reset */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #F5F5F3;
+      ;
+    }
+
+    table {
+      border-spacing: 0;
+    }
+
+    td {
+      padding: 0;
+    }
+
+    img {
+      border: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* center tag */
+    .wrapper {
+      background-color: #F5F5F3;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    /* main table */
+    .main {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #E8EAEA;
+      color: #19322F;
+      border-spacing: 0;
+      font-family: "DIN Next LT W01 Light", Helvetica, Arial, Verdana, sans-serif;
+    }
+
+    .button {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      background-color: #19322F;
+      padding: 15px 40px;
+      border-radius: 5px;
+      border: 1px solid;
+      text-decoration: none;
+      display: inline-block;
+      letter-spacing: 0.5px;
+      margin-bottom: 65px;
+      margin-top: 20px;
+    }
+
+
+    .two-columns {
+      text-align: center;
+      font-size: 0;
+      line-height: 0;
+    }
+
+    .column {
+      width: 100%;
+      max-width: 300px;
+      display: inline-block;
+      border-spacing: 0;
+      text-align: center;
+      vertical-align: top;
+    }
+    
+    /* lower two columns with guitar guy */
+    .two-columns-b {
+      text-align: center;
+      font-size: 0;
+      line-height: 0;
+    }
+
+    .column-b {
+      /* width: 35%; */
+      width: 210px;
+      max-width: 210px; /* need this? */
+      display: inline-block;
+      border-spacing: 0;
+      text-align: center;
+      vertical-align: top;
+    }
+
+    .column-b2 {
+      /* width: 65%; */
+      width: 390px;
+      max-width: 390px;
+      display: inline-block;
+      border-spacing: 0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .padding-b {
+      padding: 70px 20px 60px 20px;
+    }
+
+    .footer {
+      display: block;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 19.8px;
+      padding-bottom: 12px;
+    }
+
+
+
+
+    @media screen and (max-width: 617.98px) {
+      .column {
+        max-width: 600px !important;
+      }
+
+      .padding {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 10px !important;
+      }
+
+
+      .column-b {
+        width: 250px !important;
+        max-width: 250px!important;
+        text-align: center !important;
+        /* display: block !important; */
+      }
+
+      
+      .img-guitar {
+        width: 250px!important;
+        max-width: 250px!important;
+      }
+
+      .padding-b {
+        /* padding-left: 150px !important; */
+        /* padding-right: 50px !important; */
+        padding-right: 10!important;
+        padding-left: 10!important;
+        padding-bottom: 0!important;
+      }
+
+      
+     
+
+      .column-b2 {
+        width: 100% !important;
+        max-width: 550px!important;
+        text-align: center !important;
+        display: block !important;
+        
+      }
+
+     .griff-para {
+       font-size: 18px!important;
+       text-align: left;
+       line-height: 27px!important;
+     }
+
+     .griff {
+      font-size: 22px!important;
+     }
+
+    }
+
+    @media screen and (max-width: 399.98px) {}
+
+    /* Custom Dark Mode Colors */
+    
+    @media (prefers-color-scheme: dark) {
+      /* Enter code in dark mode section below */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Start: Preheader -->
+  <div
+    style="font-family:Arial, sans-serif;font-size:1px;color:#f6f7fb;line-height:1px;mso-line-height-rule:exactly;display:none;max-width:0px;max-height:0px;opacity:0;overflow:hidden;mso-hide:all;">
+    Your preheader text goes here
+  </div>
+  <!-- End: Preheader -->
+  <center class="wrapper">
+    <table class="main" align="center" cellspacing="0" cellpadding="0" role="presentation">
+
+      <!-- TOP BANNER1 -->
+      <tr>
+        <td>
+          <a href="#"><img
+              src="https://d3k81ch9hvuctc.cloudfront.net/company/NHDMiU/images/4fcd6964-c739-402b-aab5-46d04fa6621b.jpeg"
+              alt="banner" width="600" style="max-width: 100%;border-spacing: 0;"></a>
+        </td>
+      </tr>
+      <!-- MIDDLE SECTION -->
+      <tr>
+        <td style="text-align: center;padding: 15px;">
+          <p style="font-size: 30px;"><strong>(Re)Introducing the Free Spirit</strong></p>
+          <a href="#"><img
+              src="https://d3k81ch9hvuctc.cloudfront.net/company/NHDMiU/images/2ac9adf8-76e5-408f-9f4a-fe86f0335c6b.png"
+              alt="" width="600" style="max-width: 100%;"></a>
+          <p style="font-size: 18px;font-weight: 400;line-height: 27px;">The Free Spirit was first introduced in 1988 as
+            part of our innovative Danner Crosshikers™ collection.
+            Three decades later, the Free Spirit returns with <strong>updated materials and a modern look that pays
+              homage to
+              its retro hiker roots.</strong> It's versatile enough to wear with your daypack or your favorite pair of
+            jeans,
+            making it the ideal choice for adventurous spirits — because your footwear shouldn't hold you back.</p>
+          <a href="#" class="button"><strong>SHOP FREE SPIRIT</strong></a>
+        </td>
+      </tr>
+      <!-- PORTRAIT 2 COLUMNS -->
+      <tr>
+        <td>
+          <table width="100%" align="center" cellpadding="0" cellspacing="0" role="presentation"
+            style="border-spacing: 0;">
+            <tr>
+              <td class="two-columns">
+
+                <table class="column" width="100%" align="center" cellspacing="0" cellpadding="0" role="presentation"
+                  style="border-spacing: 0;">
+                  <tr>
+                    <td class="padding" style="padding-right: 5px;">
+                      <table class="content" width="100%" align="center" cellspacing="0" cellpadding="0"
+                        role="presentation" style="border-spacing: 0;">
+                        <tr>
+                          <td>
+                            <a href="#"><img
+                                src="https://d3k81ch9hvuctc.cloudfront.net/company/NHDMiU/images/09abc608-8372-4d3a-8cb9-231f31f47097.jpeg"
+                                alt="photo" style="max-width: 100%;"></a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <table class="column" width="100%" align="center" cellspacing="0" cellpadding="0" role="presentation"
+                  style="border-spacing: 0;">
+                  <tr>
+                    <td class="padding" style="padding-left: 5px;">
+                      <table class="content" width="100%" align="center" cellspacing="0" cellpadding="0"
+                        role="presentation" style="border-spacing: 0;">
+                        <tr>
+                          <td>
+                            <a href="#"><img
+                                src="https://d3k81ch9hvuctc.cloudfront.net/company/NHDMiU/images/eb4d0d87-b1d3-4cef-bd81-1457ed01a3ee.jpeg"
+                                alt="photo" style="max-width: 100%;"></a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- PORTRAIT 1 COLUMN BOTTOM -->
+      <tr>
+        <td>
+          <table width="100%" align="center" cellspacing="0" cellpadding="0" role="presentation"
+            style="border-spacing: 0;">
+            <tr>
+              <td style="padding-top: 10px">
+                <a href="#"><img
+                    src="https://d3k81ch9hvuctc.cloudfront.net/company/NHDMiU/images/6099c090-e1f1-4172-963c-39c8d89faf33.jpeg"
+                    alt="photo" width="600" style="max-width: 100%;"></a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- TWO COLUMNS BOTTOM -->
+      <tr>
+        <td>
+          <table width="100%" align="center" cellpadding="0" cellspacing="0" role="presentation"
+            style="border-spacing: 0;">
+            <tr>
+              <td class="two-columns-b">
+
+                <table class="column-b" width="100%" align="center" cellpadding="0" cellspacing="0" role="presentation"
+                  style="border-spacing: 0;">
+                  <tr>
+                    <td class="padding-b">
+                      <table class="content-b" width="100%" align="center" cellpadding="0" cellspacing="0"
+                        role="presentation" style="border-spacing: 0;">
+                        <tr>
+                          <td>
+                            <a href="#"><img class="img-guitar"
+                                src="https://d3k81ch9hvuctc.cloudfront.net/company/NHDMiU/images/35955b1b-c858-4fd8-868e-6453e7183d62.png"
+                                alt="photo" width="173" style="border-radius: 50%;"></a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <table class="column-b2" width="100%" align="center" cellpadding="0" cellspacing="0" role="presentation"
+                  style="border-spacing: 0;">
+                  <tr>
+                    <td class="padding-b">
+                      <table class="content-b" width="100%" align="center" cellpadding="0" cellspacing="0"
+                        role="presentation" style="border-spacing: 0;">
+                        <tr>
+                          <td class="griff-para" style="font-size: 16px;">
+                            <a href="#" class="griff" style="font-size: 20px;font-weight: 700;color: #19322F;"><strong>Griff
+                                Washburn</strong></a>
+                            <p class="griff-para" style="font-size: 16px;font-weight: 400;line-height: 24px;">Griff Washburn, aka Goth
+                              Babe, is a musician and conservationist based in the Pacific
+                              Northwest. When not playing shows at some of the largest venues in the country, he stays
+                              down to earth by enjoying the great outdoors with his pup Sadie and generally just living
+                              life day by day.</p>
+                            <p style="padding-top: 10px;">Check out his music <a href="#"
+                                style="color: #19322F;text-decoration: underline;">here</a></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- FOOTER -->
+      <tr>
+        <td style="padding: 20px 20px 60px 20px;background-color: #19322f;">
+          <table width="100%" align="center" cellspacing="0" cellpadding="0" role="presentation" style="border-spacing: 0;">
+
+            <tr>
+              <td align="center" style="padding-top: 40px;padding-bottom: 55px;">
+                <a href="#"><img src="https://d3k81ch9hvuctc.cloudfront.net/company/NHDMiU/images/e0a5bb7f-991f-4e73-86ce-e3f3457ee7fe.png" alt="logo" width="100"></a>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="display: block;text-align: center;color: #ffffff;">
+                <a href="#" class="footer"><strong>Shop Men's</strong></a>
+                <a href="#" class="footer"><strong>Shop Women's</strong></a>
+                <a href="#" class="footer"><strong>Support</strong></a>
+                <a href="#" class="footer"><strong>Pay Later With Klarna</strong></a>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center" style="padding: 20px 0 20px 0;">
+                <a href="#"><img src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/subtleinverse/instagram_96.png" alt="" width="48"></a>
+                <a href="#"><img src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/subtleinverse/twitter_96.png" alt="" width="48"></a>
+                <a href="#"><img src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/subtleinverse/youtube_96.png" alt="" width="48"></a>
+                <a href="#"><img src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/subtleinverse/facebook_96.png" alt="" width="48"></a>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center">
+                <p style="font-size: 15px;font-weight:400;padding-bottom: 10px;">17634 NE Airport Way Portland, OR 97230</p>
+                <a href="#" style="font-size: 12px;font-weight:400;color: #ffffff;text-decoration: none;">Unsubscribe from Danner Emails</a>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+
+
+
+
+    </table>
+  </center>
+
+</body>
+
+</html>
